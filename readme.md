@@ -10,7 +10,7 @@
 ## Install
 
 ```
-$ npm install jsonp-promi
+$ npm install jsonp-promi --save
 ```
 
 
