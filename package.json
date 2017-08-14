@@ -1,7 +1,7 @@
 {
   "name": "jsonp-promi",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0.2",
+  "description": "jsonp with promise ",
   "main": "jsonpPromise.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
