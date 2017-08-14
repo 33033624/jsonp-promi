@@ -20,10 +20,11 @@ $ npm install jsonp-promi
 const jsonpPromise = require('jsonp-promi');
 
 jsonpPromise(url, opts).then((data) => {}).catch(err => {})
-// the url is only url and the opts is params for example {params: 'callbackname', timeout: 20000 }, the timeout is default as 60000 and the params is default as 'callback'
+// the url is only url and the opts is params for example {params: 'callbackname', timeout: 20000 } 
+// the timeout is default as 60000 and the params is default as 'callback'
 
 // example 
-jsonpPromise('www.123.com', {params: 'callback', timeout:2000 })
-// it seem as 'www.123.com?callback=fn'
+jsonpPromise('www.123.com', {params: 'callback', timeout:2000 }).then(data => {}).catch(err => {})
+// it seem as 'www.123.com?callback=fn' and we can use it as sync 
 ```
 
