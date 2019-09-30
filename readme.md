@@ -1,30 +1,29 @@
-# jsonp-promi 
+# jsonp-promi
 
----
-
-<p align="center"><b>🔥 Do you like jsonp ? no ? yeah i dont like it, if you dont like it and also use it,you can use the json-promi.it is so easy</b></p>
-
----
-
-
-## Install
+## 安装
 
 ```
 $ npm install jsonp-promi --save
 ```
 
-
-## Usage
+## 用法
 
 ```js
-const jsonpPromise = require('jsonp-promi');
+// 如果你喜欢直接使用promise 那么可以按照以下方式使用
+const jsonpPromise = require("jsonp-promi");
 
-jsonpPromise(url, opts).then((data) => {}).catch(err => {})
-// the url is only url and the opts is params for example {params: 'callbackname', timeout: 20000 } 
-// the timeout is default as 60000 and the params is default as 'callback'
-
-// example 
-jsonpPromise('www.123.com', {params: 'callback', timeout:2000 }).then(data => {}).catch(err => {})
-// it seem as 'www.123.com?callback=fn' and we can use it as sync 
+jsonpPromise("www.123.com", { params: "callback", timeout: 2000 })
+  .then(data => {})
+  .catch(err => {});
+// 其实就像我们平时理解的那样，调用的url为'www.123.com?callback=fn'
 ```
 
+```js
+// 如果你喜欢用async await语法糖来解决promise的问题，那么你也可以这样使用
+const jsonpPromise = require("jsonp-promi");
+const fun = await function() {
+  const res = async jsonpPromise("www.123.com", { params: "callback", timeout: 2000 });
+  console.log(res); // res就是你想取到的数据
+}
+fun();
+```
